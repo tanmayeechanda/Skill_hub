@@ -1,0 +1,120 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  gap: var(--spacing-xl);
+}
+
+.home-main {
+  flex: 1;
+  padding: 0 var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.courses-section {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: #ffffff;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  color: #000000;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+}
+
+.search-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  background: #ffffff;
+  color: #000000;
+  transition: all var(--transition-base);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .home-container {
+    gap: var(--spacing-lg);
+  }
+
+  .home-main {
+    padding: 0;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .home-main {
+    padding: var(--spacing-lg);
+  }
+
+  .courses-section {
+    padding: var(--spacing-lg);
+    margin: 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,125 @@
+.course-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course-card-header {
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0;
+  line-height: 1.4;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.course-card-body {
+  margin-bottom: var(--spacing-lg);
+}
+
+.course-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: #f9f9f9;
+  border-radius: var(--radius-md);
+  color: #666666;
+}
+
+.stat-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.course-card-footer {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.btn-view,
+.btn-edit,
+.btn-delete {
+  flex: 1;
+  min-width: 80px;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-view {
+  background: #0066cc;
+  color: white;
+}
+
+.btn-view:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.btn-edit {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.btn-delete {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .course-card {
+    padding: var(--spacing-md);
+  }
+
+  .course-title {
+    font-size: 1.1rem;
+  }
+
+  .course-card-footer {
+    flex-direction: column;
+  }
+
+  .btn-view,
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+  }
+}
